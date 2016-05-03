@@ -1,0 +1,2 @@
+docker build -t kafka-docker .
+docker run --name kafka-container --rm -ti -e KAFKA_BROKER_ID=1 -e KAFKA_ADVERTISED_HOST_NAME=192.168.99.100 --publish 2181:2181 --publish 9092:9092 kafka-docker
